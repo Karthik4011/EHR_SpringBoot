@@ -18,14 +18,15 @@ public class negotiations {
     private String solditemname;
     private String borrowitemname;
     private String selleritemowner;
-
+    private String solditemprice;
+    private String borrowitemprice;
 
 
     public negotiations(){
 
     }
 
-    public negotiations(int id, int receiverid, int sellerid, int borroweitemid, int solditemid, String status, String borrowitemowner, String borrowitemimage, String solditemimage, String solditemname, String borrowitemname, String selleritemowner) {
+    public negotiations(int id, int receiverid, int sellerid, int borroweitemid, int solditemid, String status, String borrowitemowner, String borrowitemimage, String solditemimage, String solditemname, String borrowitemname, String selleritemowner, String solditemprice, String borrowitemprice) {
         this.id = id;
         this.receiverid = receiverid;
         this.sellerid = sellerid;
@@ -38,6 +39,8 @@ public class negotiations {
         this.solditemname = solditemname;
         this.borrowitemname = borrowitemname;
         this.selleritemowner = selleritemowner;
+        this.solditemprice = solditemprice;
+        this.borrowitemprice = borrowitemprice;
     }
 
     @Id
@@ -136,5 +139,21 @@ public class negotiations {
 
     public void setSelleritemowner(String selleritemowner) {
         this.selleritemowner = selleritemowner;
+    }
+
+    public String getSolditemprice() {
+        return solditemprice;
+    }
+
+    public void setSolditemprice(String solditemprice) {
+        this.solditemprice = solditemprice;
+    }
+
+    public String getBorrowitemprice() {
+        return borrowitemprice;
+    }
+
+    public void setBorrowitemprice(String borrowitemprice) {
+        this.borrowitemprice = borrowitemprice;
     }
 }

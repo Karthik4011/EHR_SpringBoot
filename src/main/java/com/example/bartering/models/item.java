@@ -15,21 +15,24 @@ public class item {
     private String image;
     private int sellerid;
     private String inserteddate;
+    private String price;
+
 
     public item(){
 
     }
 
-    public item(int id, String name, String inserteddate, String description, String expectations, String image, String producttype, String quantity, int sellerid) {
+    public item(int id, String name, String description, String producttype, String expectations, String quantity, String image, int sellerid, String inserteddate, String price) {
         this.id = id;
         this.name = name;
-        this.inserteddate = inserteddate;
         this.description = description;
-        this.expectations = expectations;
-        this.image = image;
         this.producttype = producttype;
+        this.expectations = expectations;
         this.quantity = quantity;
+        this.image = image;
         this.sellerid = sellerid;
+        this.inserteddate = inserteddate;
+        this.price = price;
     }
 
     @Id
@@ -104,5 +107,13 @@ public class item {
 
     public void setSellerid(int sellerid) {
         this.sellerid = sellerid;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }
