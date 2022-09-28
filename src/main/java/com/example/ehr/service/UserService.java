@@ -1,9 +1,9 @@
-package com.example.bartering.service;
+package com.example.ehr.service;
 
-import com.example.bartering.models.users;
+import com.example.ehr.models.users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.bartering.repository.UserRepository;
+import com.example.ehr.repository.UserRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;

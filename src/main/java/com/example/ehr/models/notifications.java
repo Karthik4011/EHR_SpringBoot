@@ -1,4 +1,4 @@
-package com.example.bartering.models;
+package com.example.ehr.models;
 
 import javax.persistence.*;
 

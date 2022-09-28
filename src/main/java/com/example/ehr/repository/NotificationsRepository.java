@@ -1,6 +1,6 @@
-package com.example.bartering.repository;
+package com.example.ehr.repository;
 
-import com.example.bartering.models.notifications;
+import com.example.ehr.models.notifications;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

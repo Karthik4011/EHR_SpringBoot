@@ -1,12 +1,12 @@
-package com.example.bartering.controllers;
+package com.example.ehr.controllers;
 
 
-import com.example.bartering.models.users;
+import com.example.ehr.models.users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.bartering.service.UserService;
+import com.example.ehr.service.UserService;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -19,12 +19,12 @@ public class UserController {
     UserService userService;
 
 
-    @GetMapping("/users")
+    @GetMapping("/patients")
     public List<users> list() {
         return userService.listAllUser();
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/patients/{id}")
     public ResponseEntity<users> get(@PathVariable Integer id) {
         try {
             users user = userService.getUser(id);

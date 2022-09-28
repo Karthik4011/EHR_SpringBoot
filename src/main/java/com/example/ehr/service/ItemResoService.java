@@ -1,9 +1,7 @@
-package com.example.bartering.service;
+package com.example.ehr.service;
 
-import com.example.bartering.models.item;
-import com.example.bartering.models.itemresp;
-import com.example.bartering.repository.ItemRepository;
-import com.example.bartering.repository.ItemRespRepository;
+import com.example.ehr.models.itemresp;
+import com.example.ehr.repository.ItemRespRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

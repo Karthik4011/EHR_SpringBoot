@@ -1,7 +1,7 @@
-package com.example.bartering.repository;
+package com.example.ehr.repository;
 
-import com.example.bartering.models.item;
-import com.example.bartering.models.itemresp;
+import com.example.ehr.models.item;
+import com.example.ehr.models.itemresp;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,7 +1,7 @@
-package com.example.bartering.controllers;
+package com.example.ehr.controllers;
 
-import com.example.bartering.models.negotiations;
-import com.example.bartering.service.NegotiationService;
+import com.example.ehr.models.negotiations;
+import com.example.ehr.service.NegotiationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

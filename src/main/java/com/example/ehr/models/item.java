@@ -1,35 +1,38 @@
-package com.example.bartering.models;
+package com.example.ehr.models;
 
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "items")
-public class itemresp {
+@Table(name = "item")
+public class item {
     private int id;
     private String name;
     private String description;
-    private String expectations;
-    private String itemimage;
     private String producttype;
+    private String expectations;
     private String quantity;
+    private String image;
     private int sellerid;
     private String inserteddate;
+    private String price;
 
-    public itemresp(){
+
+    public item(){
 
     }
 
-    public itemresp(int id, String name, String description, String expectations, String itemimage, String producttype, String quantity, int sellerid, String inserteddate) {
+    public item(int id, String name, String description, String producttype, String expectations, String quantity, String image, int sellerid, String inserteddate, String price) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.expectations = expectations;
-        this.itemimage = itemimage;
         this.producttype = producttype;
+        this.expectations = expectations;
         this.quantity = quantity;
+        this.image = image;
         this.sellerid = sellerid;
         this.inserteddate = inserteddate;
+        this.price = price;
     }
 
     @Id
@@ -50,6 +53,14 @@ public class itemresp {
         this.name = name;
     }
 
+    public String getInserteddate() {
+        return inserteddate;
+    }
+
+    public void setInserteddate(String inserteddate) {
+        this.inserteddate = inserteddate;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -66,12 +77,12 @@ public class itemresp {
         this.expectations = expectations;
     }
 
-    public String getItemimage() {
-        return itemimage;
+    public String getImage() {
+        return image;
     }
 
-    public void setItemimage(String itemimage) {
-        this.itemimage = itemimage;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getProducttype() {
@@ -98,11 +109,11 @@ public class itemresp {
         this.sellerid = sellerid;
     }
 
-    public String getInserteddate() {
-        return inserteddate;
+    public String getPrice() {
+        return price;
     }
 
-    public void setInserteddate(String inserteddate) {
-        this.inserteddate = inserteddate;
+    public void setPrice(String price) {
+        this.price = price;
     }
 }

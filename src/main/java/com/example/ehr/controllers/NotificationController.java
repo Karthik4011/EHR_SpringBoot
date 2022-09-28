@@ -1,17 +1,12 @@
-package com.example.bartering.controllers;
+package com.example.ehr.controllers;
 
 
-import com.example.bartering.models.notifications;
-import com.example.bartering.models.users;
-import com.example.bartering.service.NotificationService;
+import com.example.ehr.models.notifications;
+import com.example.ehr.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.bartering.service.UserService;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api")
