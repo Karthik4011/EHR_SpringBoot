@@ -1,32 +1,32 @@
 package com.example.ehr.service;
 
-import com.example.ehr.models.users;
+import com.example.ehr.models.doctor;
+import com.example.ehr.repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.ehr.repository.UserRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
 @Transactional
-public class UserService {
+public class DoctorService {
     @Autowired
-    private UserRepository userRepository;
+    private DoctorRepository userRepository;
 
-    public List<users> listAllUser() {
+    public List<doctor> listAllUser() {
         return userRepository.findAll();
     }
 
-    public users getUser(Integer id) {
+    public doctor getUser(Integer id) {
         return userRepository.findById(id).get();
     }
 
-    public users getUserByEmail(String email) {
+    public doctor getUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
-    public users saveUser(users usr) {
+    public doctor saveUser(doctor usr) {
         return userRepository.save(usr);
     }
 

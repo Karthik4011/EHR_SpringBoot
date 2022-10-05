@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "patient")
-public class users {
+public class patient {
     private int id;
     private String first_name;
     private String last_name;
@@ -20,10 +20,10 @@ public class users {
     private String occupation;
     private String password;
 
-    public users() {
+    public patient() {
     }
 
-    public users(int id, String first_name, String last_name, String email, String phone, String address, String date_of_birth, String sex, String father_name, String mother_name, String spouse_name, String nationality, String occupation, String password) {
+    public patient(int id, String first_name, String last_name, String email, String phone, String address, String date_of_birth, String sex, String father_name, String mother_name, String spouse_name, String nationality, String occupation, String password) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
