@@ -26,4 +26,8 @@ public class DocumentsService {
         return bookingRepository.save(doc);
     }
 
+    public void delete(int id) {
+        bookingRepository.deleteById(id);
+    }
+
 }

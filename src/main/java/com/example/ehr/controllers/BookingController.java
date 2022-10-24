@@ -47,8 +47,18 @@ public class BookingController {
     }
 
     @PostMapping("/booking")
-    public ResponseEntity<booking> signup(@RequestBody booking bkng) {
+    public ResponseEntity<booking> newbooking(@RequestBody booking bkng) {
         try {
+            booking book = bookingService.saveUser(bkng);
+            return new ResponseEntity<booking>(book, HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<booking>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping("/booking")
+    public ResponseEntity<booking> update(@RequestBody booking bkng) {
+        try{
             booking book = bookingService.saveUser(bkng);
             return new ResponseEntity<booking>(book, HttpStatus.OK);
         } catch (NoSuchElementException e) {

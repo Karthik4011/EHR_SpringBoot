@@ -11,16 +11,18 @@ public class booking {
     private int doctorid;
     private String bookingdate;
     private String documentslist;
+    private String status;
 
     public booking() {
     }
 
-    public booking(int bookingid, int patientid, int doctorid, String bookingdate, String documentslist) {
+    public booking(int bookingid, int patientid, int doctorid, String bookingdate, String documentslist, String status) {
         this.bookingid = bookingid;
         this.patientid = patientid;
         this.doctorid = doctorid;
         this.bookingdate = bookingdate;
         this.documentslist = documentslist;
+        this.status = status;
     }
 
     @Id
@@ -63,5 +65,13 @@ public class booking {
 
     public void setDocumentslist(String documentslist) {
         this.documentslist = documentslist;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

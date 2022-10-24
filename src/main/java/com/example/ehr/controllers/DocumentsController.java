@@ -20,8 +20,8 @@ public class DocumentsController {
 
 
     @GetMapping("/documents")
-    public List<documents> list() {
-        return documentsService.listAllDocuments();
+    public ResponseEntity<List<documents>> list() {
+        return new ResponseEntity<List<documents>>(documentsService.listAllDocuments(), HttpStatus.OK);
     }
 
     @GetMapping("/documents/user/{id}")
@@ -35,13 +35,19 @@ public class DocumentsController {
     }
 
     @PostMapping("/documents")
-    public ResponseEntity<documents> signup(@RequestBody documents bkng) {
+    public ResponseEntity<documents> insert(@RequestBody documents bkng) {
         try {
             documents book = documentsService.save(bkng);
             return new ResponseEntity<documents>(book, HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<documents>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @DeleteMapping("/documents/{id}")
+    public ResponseEntity<documents> signup(@PathVariable int id){
+        documentsService.delete(id);
+        return new ResponseEntity<documents>(HttpStatus.OK);
     }
 
 }
