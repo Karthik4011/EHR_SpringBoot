@@ -12,17 +12,19 @@ public class booking {
     private String bookingdate;
     private String documentslist;
     private String status;
+    private String action;
 
     public booking() {
     }
 
-    public booking(int bookingid, int patientid, int doctorid, String bookingdate, String documentslist, String status) {
+    public booking(int bookingid, int patientid, int doctorid, String bookingdate, String documentslist, String status, String action) {
         this.bookingid = bookingid;
         this.patientid = patientid;
         this.doctorid = doctorid;
         this.bookingdate = bookingdate;
         this.documentslist = documentslist;
         this.status = status;
+        this.action = action;
     }
 
     @Id
@@ -73,5 +75,13 @@ public class booking {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
     }
 }

@@ -19,11 +19,13 @@ public class patient {
     private String nationality;
     private String occupation;
     private String password;
+    private String action;
+    private String pdate;
 
     public patient() {
     }
 
-    public patient(int id, String first_name, String last_name, String email, String phone, String address, String date_of_birth, String sex, String father_name, String mother_name, String spouse_name, String nationality, String occupation, String password) {
+    public patient(int id, String first_name, String last_name, String email, String phone, String address, String date_of_birth, String sex, String father_name, String mother_name, String spouse_name, String nationality, String occupation, String password, String action, String pdate) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -38,6 +40,8 @@ public class patient {
         this.nationality = nationality;
         this.occupation = occupation;
         this.password = password;
+        this.action = action;
+        this.pdate = pdate;
     }
 
     @Id
@@ -152,5 +156,21 @@ public class patient {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public String getPdate() {
+        return pdate;
+    }
+
+    public void setPdate(String pdate) {
+        this.pdate = pdate;
     }
 }

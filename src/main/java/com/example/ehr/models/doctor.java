@@ -16,11 +16,13 @@ public class doctor {
     private String nationality;
     private String password;
     private String specialization;
+    private String action;
+    private String ddate;
 
     public doctor() {
     }
 
-    public doctor(int id, String first_name, String last_name, String email, String phone, String address, String date_of_birth, String sex, String nationality, String password, String specialization) {
+    public doctor(int id, String first_name, String last_name, String email, String phone, String address, String date_of_birth, String sex, String nationality, String password, String specialization, String action, String ddate) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -32,6 +34,8 @@ public class doctor {
         this.nationality = nationality;
         this.password = password;
         this.specialization = specialization;
+        this.action = action;
+        this.ddate = ddate;
     }
 
     @Id
@@ -122,5 +126,21 @@ public class doctor {
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
+    }
+
+    public String getDdate() {
+        return ddate;
+    }
+
+    public void setDdate(String ddate) {
+        this.ddate = ddate;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
     }
 }

@@ -30,5 +30,9 @@ public class PatientService {
         return userRepository.save(usr);
     }
 
+    public void delete(int id) {
+        userRepository.deleteById(id);
+    }
+
 
 }

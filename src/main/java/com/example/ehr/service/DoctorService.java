@@ -30,5 +30,9 @@ public class DoctorService {
         return userRepository.save(usr);
     }
 
+    public void delete(int id) {
+        userRepository.deleteById(id);
+    }
+
 
 }

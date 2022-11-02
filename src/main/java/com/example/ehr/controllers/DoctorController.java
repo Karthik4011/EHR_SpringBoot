@@ -2,6 +2,7 @@ package com.example.ehr.controllers;
 
 
 import com.example.ehr.models.doctor;
+import com.example.ehr.models.documents;
 import com.example.ehr.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -53,6 +54,12 @@ public class DoctorController {
         } catch (NoSuchElementException e) {
             return new ResponseEntity<doctor>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @DeleteMapping("/doctor/{id}")
+    public ResponseEntity<doctor> delete(@PathVariable int id){
+        userService.delete(id);
+        return new ResponseEntity<doctor>(HttpStatus.OK);
     }
 
 }
